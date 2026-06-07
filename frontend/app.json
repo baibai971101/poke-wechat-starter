@@ -1,0 +1,12 @@
+{
+  "pages": [
+    "pages/chat/chat"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#89a478",
+    "navigationBarTitleText": "Ghibli Chat",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json"
+}

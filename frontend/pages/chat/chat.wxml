@@ -1,0 +1,25 @@
+<view class="chat-container">
+  <scroll-view scroll-y class="message-list" scroll-into-view="last-msg">
+    <view wx:for="{{messages}}" wx:key="index" class="message-item {{item.role}}">
+      <view class="avatar">
+        <text>{{item.role === 'assistant' ? '🤖' : '👤'}}</text>
+      </view>
+      <view class="bubble">
+        <text>{{item.content}}</text>
+      </view>
+    </view>
+    <view id="last-msg"></view>
+  </scroll-view>
+
+  <view class="input-area">
+    <input 
+      class="input" 
+      placeholder="Type a message..." 
+      value="{{inputValue}}" 
+      bindinput="onInput"
+      confirm-type="send"
+      bindconfirm="sendMessage"
+    />
+    <button class="send-btn" bindtap="sendMessage">Send</button>
+  </view>
+</view>
